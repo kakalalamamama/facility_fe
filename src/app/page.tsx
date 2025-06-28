@@ -199,7 +199,7 @@ export default function Home() {
             height={40}
             className="rounded-full"
           />
-          <h1 className="text-xl font-bold">FacilityBooking</h1>
+          <h1 className="text-xl font-bold">UBOOK</h1>
         </div>
         <div className="flex items-center gap-2">
           {isSignedIn && (

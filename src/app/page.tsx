@@ -245,7 +245,8 @@ export default function Home() {
             >
               <div className="text-3xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <p className="text-gray-400 whitespace-pre-line">{feature.description}</p>
+
             </button>
           ))}
         </div>

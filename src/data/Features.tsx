@@ -1,4 +1,12 @@
-const features = [
+// features.ts
+export type Feature = {
+  title: string;
+  description: string;
+  icon: string;
+  facilityId: number;
+};
+
+const features: Feature[][] = [
   [
     {
       title: "Cooking Studio",

@@ -25,11 +25,9 @@ function FeatureModal({
   });
 
   const handleBook = () => {
-    // Start time
     const startDateTime = new Date(`${selectedDate}T${selectedSlot}:00`);
     const startTime = Math.floor(startDateTime.getTime() / 1000);
 
-    // End time (add 1 hour)
     const [hour, minute] = selectedSlot.split(":").map(Number);
     const endDateTime = new Date(startDateTime);
     endDateTime.setHours(hour + 1);
@@ -39,6 +37,7 @@ function FeatureModal({
   };
 
   if (!feature) return null;
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
       <div className="bg-gray-900 rounded-xl p-8 max-w-md w-full shadow-lg relative">
@@ -51,7 +50,9 @@ function FeatureModal({
         </button>
         <div className="text-5xl mb-4 text-center">{feature.icon}</div>
         <h3 className="text-2xl font-bold mb-2 text-center">{feature.title}</h3>
-        <p className="text-gray-300 text-center mb-4">{feature.description}</p>
+        <p className="text-gray-300 text-center mb-4 whitespace-pre-line">
+          {feature.description}
+        </p>
         <div className="mb-4">
           <label className="block mb-2 font-semibold">Select Date:</label>
           <input
@@ -92,4 +93,5 @@ function FeatureModal({
     </div>
   );
 }
+
 export default FeatureModal;
